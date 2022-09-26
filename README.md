@@ -8,3 +8,6 @@
     - Example:
         ![SQL Server Connection](./images/dbeaver.png)
 5. You are done. Enjoy!
+
+# Teardown
+1. Run `docker-compose down`
