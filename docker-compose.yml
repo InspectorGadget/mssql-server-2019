@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433" # Expose 1433/tcp from container to host machine.
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=123456789AdvBs
+    volumes:
+      - sqlserver:/var/opt/mssql # MSSQL Volume Folder (If you wanna reuse the storage in the future).
+volumes:
+  sqlserver:
